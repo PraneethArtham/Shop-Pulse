@@ -1,6 +1,0 @@
-.breadcrumb { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; margin-bottom: 20px; font-size: 13px; }
-.item   { display: flex; align-items: center; gap: 4px; }
-.link   { color: var(--text2); transition: color 0.15s; }
-.link:hover { color: var(--accent); }
-.sep    { color: var(--muted); }
-.current{ color: var(--text); font-weight: 600; }
