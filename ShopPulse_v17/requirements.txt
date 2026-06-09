@@ -18,8 +18,8 @@ playwright>=1.44.0
 playwright-stealth>=1.0.6
 
 # ── NLP / ML Search Engine ───────────────────────────────────
-scikit-learn==1.4.2
-numpy>=1.26.0
+scikit-learn==1.5.2
+numpy==1.26.4
 
 # ── Selenium (manual scraping tool only — scrapping.py) ──────
 selenium==4.21.0
