@@ -1,0 +1,166 @@
+.page { max-width: 900px; margin: 0 auto; padding: 28px 24px 64px; }
+
+/* Login */
+.loginCard {
+  max-width: 440px; margin: 60px auto 0;
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg); padding: 36px 32px;
+  box-shadow: var(--shadow-md); text-align: center;
+}
+.loginIcon  { font-size: 48px; margin-bottom: 10px; }
+.loginTitle { font-size: 22px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+.loginSub   { font-size: 14px; color: var(--text2); margin-bottom: 24px; }
+.loginForm  { display: flex; flex-direction: column; gap: 10px; }
+.loginInput {
+  padding: 11px 14px; border: 1.5px solid var(--border);
+  border-radius: var(--radius-md); font-size: 14px; font-family: var(--font-mono);
+  color: var(--text); text-align: center;
+}
+.loginInput:focus { outline: none; border-color: var(--accent); }
+.loginBtn {
+  padding: 12px; background: var(--accent); color: white;
+  border: none; border-radius: var(--radius-md);
+  font-size: 14px; font-weight: 700; font-family: var(--font-body);
+}
+.loginBtn:hover { background: var(--accent-dk); }
+.loginHint { margin-top: 16px; font-size: 13px; color: var(--muted); }
+.linkBtn   { background: none; border: none; color: var(--accent); font-size: 13px; font-family: var(--font-body); text-decoration: underline; padding: 0; }
+
+/* Loading / Error */
+.loadingWrap { display: flex; align-items: center; gap: 12px; justify-content: center; padding: 60px; font-size: 15px; color: var(--text2); }
+.errorCard   { text-align: center; padding: 60px 24px; }
+.errorIcon   { font-size: 40px; margin-bottom: 12px; }
+.retryBtn    { margin-top: 16px; padding: 10px 20px; background: var(--accent); color: white; border: none; border-radius: var(--radius-md); font-family: var(--font-body); font-size: 14px; }
+
+/* Store Header */
+.storeHeader {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px 24px;
+  box-shadow: var(--shadow-sm); margin-bottom: 20px;
+}
+.storeInfo  { display: flex; align-items: center; gap: 16px; }
+.storeIcon  { font-size: 36px; }
+.storeName  { font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+.storeMeta  { font-size: 13px; color: var(--text2); }
+.headerStats { display: flex; gap: 20px; }
+.stat { text-align: center; }
+.stat strong { display: block; font-size: 22px; font-weight: 800; color: var(--accent); }
+.stat span   { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* Tabs */
+.tabs { display: flex; gap: 6px; margin-bottom: 20px; border-bottom: 1.5px solid var(--border); }
+.tab  {
+  padding: 10px 18px; background: none; border: none;
+  font-size: 14px; font-family: var(--font-body); color: var(--text2);
+  border-bottom: 2px solid transparent; margin-bottom: -1.5px;
+  transition: all 0.15s;
+}
+.tab:hover    { color: var(--text); }
+.tabActive    { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+
+/* Add product card */
+.addCard {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: var(--radius-md); padding: 18px 20px;
+  box-shadow: var(--shadow-sm); margin-bottom: 16px;
+}
+.addTitle  { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 14px; }
+.addRow    { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
+.addField  { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 120px; position: relative; }
+.addLabel  { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.addInput  {
+  padding: 9px 12px; border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm); font-size: 13px;
+  font-family: var(--font-body); color: var(--text); background: var(--white);
+}
+.addInput:focus { outline: none; border-color: var(--accent); }
+.inputError     { border-color: var(--red) !important; }
+.fieldError     { font-size: 11px; color: var(--red); position: absolute; bottom: -16px; }
+.formError      { font-size: 13px; color: var(--red); margin-bottom: 10px; }
+.addBtn {
+  padding: 9px 20px; background: var(--accent); color: white;
+  border: none; border-radius: var(--radius-sm);
+  font-size: 13px; font-weight: 700; font-family: var(--font-body);
+  white-space: nowrap; align-self: flex-end;
+  display: flex; align-items: center; gap: 6px;
+}
+.addBtn:hover:not(:disabled) { background: var(--accent-dk); }
+.addBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Autocomplete */
+.sugg {
+  position: absolute; top: 100%; left: 0; right: 0; z-index: 50;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-md); box-shadow: var(--shadow-lg); overflow: hidden; margin-top: 2px;
+}
+.suggItem {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 9px 12px; width: 100%; background: none; border: none;
+  font-family: var(--font-body); text-align: left; cursor: pointer;
+  border-bottom: 1px solid var(--border);
+}
+.suggItem:last-child { border-bottom: none; }
+.suggItem:hover { background: var(--surface2); }
+.suggName  { font-size: 13px; color: var(--text); }
+.suggPrice { font-size: 12px; color: var(--green); font-weight: 600; }
+
+/* Products table */
+.emptyProducts {
+  text-align: center; padding: 40px; color: var(--muted); font-size: 15px;
+}
+.emptyProducts span { font-size: 36px; display: block; margin-bottom: 8px; }
+
+.productTable { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); }
+.tableHead {
+  display: grid; grid-template-columns: 3fr 1fr 1fr 1fr 1.5fr;
+  padding: 10px 16px; background: var(--surface2);
+  font-size: 11px; font-weight: 700; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border);
+}
+.tableRow {
+  display: grid; grid-template-columns: 3fr 1fr 1fr 1fr 1.5fr;
+  padding: 12px 16px; align-items: center;
+  border-bottom: 1px solid var(--border); gap: 8px;
+}
+.tableRow:last-child { border-bottom: none; }
+.tableRow:hover { background: var(--surface2); }
+
+.prodName  { font-size: 13px; color: var(--text); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.prodPrice { font-size: 14px; font-weight: 700; color: var(--green); }
+.prodStock { font-size: 13px; color: var(--text2); }
+.stockBadge { font-size: 11px; padding: 3px 8px; border-radius: 100px; border: 1px solid; white-space: nowrap; }
+.inStock    { color: var(--green); border-color: rgba(22,163,74,0.3); background: var(--green-lt); }
+.outStock   { color: var(--red);   border-color: rgba(220,38,38,0.2); background: #fff5f5; }
+
+.actions   { display: flex; gap: 6px; }
+.editBtn   { padding: 5px 10px; background: var(--blue-lt); border: 1px solid rgba(37,99,235,0.3); border-radius: var(--radius-sm); font-size: 12px; color: var(--blue); font-family: var(--font-body); }
+.delBtn    { padding: 5px 10px; background: #fff5f5; border: 1px solid rgba(220,38,38,0.3); border-radius: var(--radius-sm); font-size: 12px; color: var(--red); font-family: var(--font-body); }
+.saveBtn   { padding: 5px 10px; background: var(--green-lt); border: 1px solid rgba(22,163,74,0.3); border-radius: var(--radius-sm); font-size: 12px; color: var(--green); font-family: var(--font-body); }
+.cancelBtn { padding: 5px 10px; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 12px; color: var(--muted); font-family: var(--font-body); }
+.editInput { padding: 5px 8px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 13px; width: 80px; font-family: var(--font-body); }
+
+/* Settings */
+.settingsCard {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm);
+}
+.settingsTitle  { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 16px; }
+.settingsField  { margin-bottom: 14px; display: flex; flex-direction: column; gap: 5px; }
+.settingsRow    { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.saveMsg        { font-size: 13px; margin-bottom: 10px; }
+.saveStoreBtn   { padding: 11px 24px; background: var(--accent); color: white; border: none; border-radius: var(--radius-md); font-size: 14px; font-weight: 700; font-family: var(--font-body); }
+.saveStoreBtn:hover { background: var(--accent-dk); }
+
+.dangerZone     { margin-top: 32px; padding: 16px 20px; border: 1px solid rgba(220,38,38,0.2); border-radius: var(--radius-md); background: #fff5f5; }
+.dangerTitle    { font-size: 13px; font-weight: 700; color: var(--red); margin-bottom: 6px; }
+.dangerDesc     { font-size: 13px; color: var(--text2); margin-bottom: 12px; }
+.deleteStoreBtn { padding: 9px 18px; background: var(--red); color: white; border: none; border-radius: var(--radius-sm); font-size: 13px; font-weight: 700; font-family: var(--font-body); }
+
+.spinner {
+  width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.35);
+  border-top-color: #fff; border-radius: 50%;
+  animation: spin 0.7s linear infinite; display: inline-block;
+}
+@keyframes spin { to { transform: rotate(360deg); } }

@@ -1,0 +1,161 @@
+.page { max-width: 1100px; margin: 0 auto; padding: 28px 24px 64px; min-height: calc(100vh - 60px); }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: 300px 1fr; gap: 32px; margin: 0 0 28px; }
+.heroImg { aspect-ratio: 1; border-radius: var(--radius-md); border: 1px solid var(--border); background: var(--surface2); display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: var(--shadow-sm); }
+.heroImg img { width: 100%; height: 100%; object-fit: contain; padding: 16px; }
+.imgFallback { font-size: 72px; opacity: 0.3; }
+.heroInfo { display: flex; flex-direction: column; gap: 10px; }
+.brandTag { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); font-family: var(--font-mono); }
+.pName   { font-size: 22px; font-weight: 800; color: var(--text); line-height: 1.3; }
+.desc    { font-size: 14px; color: var(--text2); line-height: 1.6; }
+
+.priceBlock { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.fromLabel  { font-size: 13px; color: var(--muted); }
+.priceMain  { font-size: 34px; font-weight: 800; color: var(--green); }
+.priceRange { font-size: 13px; color: var(--muted); }
+
+.statsStrip { display: flex; flex-wrap: wrap; gap: 8px; }
+.statsStrip span {
+  font-size: 12px; padding: 4px 12px; border-radius: 100px;
+  background: var(--surface2); border: 1px solid var(--border); color: var(--text2);
+}
+.savingsStat { color: var(--green) !important; border-color: rgba(22,163,74,0.3) !important; background: var(--green-lt) !important; }
+.fakeStat    { color: var(--gold)  !important; border-color: rgba(217,119,6,0.3) !important; background: var(--gold-lt)  !important; }
+
+/* Deal badges */
+.badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.badge  { font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 100px; border: 1px solid; }
+.badgeAtl  { background: #fff5f5; border-color: rgba(220,38,38,0.3); color: var(--red); }
+.badgeSave { background: var(--green-lt); border-color: rgba(22,163,74,0.3); color: var(--green); }
+
+/* Savings bar */
+.savingsBar { display: flex; border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; margin-bottom: 28px; background: var(--white); box-shadow: var(--shadow-sm); }
+.statBox { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 14px 8px; gap: 3px; border-right: 1px solid var(--border); }
+.statBox:last-child { border-right: none; }
+.statLabel { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+.statVal   { font-size: 16px; font-weight: 800; }
+
+/* Sections */
+.section { margin-bottom: 32px; }
+.sTitle  { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
+.sCnt    { font-size: 12px; color: var(--muted); background: var(--surface2); border: 1px solid var(--border); padding: 2px 10px; border-radius: 100px; }
+.sSub    { font-size: 13px; color: var(--text2); margin-bottom: 14px; }
+
+/* Platform rows */
+.platformList { display: flex; flex-direction: column; gap: 8px; }
+.platformRow  { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border: 1.5px solid var(--border); border-radius: var(--radius-md); background: var(--white); transition: all 0.15s; gap: 10px; text-decoration: none; box-shadow: var(--shadow-sm); }
+.platformRow:hover { border-color: var(--accent); box-shadow: var(--shadow-md); }
+.bestRow      { border-color: rgba(22,163,74,0.4); background: var(--green-lt); }
+.rowLeft      { display: flex; align-items: center; gap: 8px; flex: 1; }
+.rowRight     { display: flex; align-items: center; gap: 8px; }
+.pBadge       { padding: 4px 12px; border-radius: 100px; font-size: 13px; font-weight: 700; }
+.bestTag      { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; padding: 3px 8px; background: var(--green); color: white; border-radius: 100px; }
+.trustChip    { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 100px; background: var(--surface2); border: 1px solid var(--border); }
+.saveChip     { font-size: 11px; font-weight: 700; color: var(--green); background: var(--green-lt); border: 1px solid rgba(22,163,74,0.25); padding: 2px 8px; border-radius: 100px; }
+.rowPrice     { font-size: 18px; font-weight: 800; color: var(--text); }
+.visitBtn     { padding: 6px 14px; border-radius: var(--radius-sm); color: white; font-size: 12px; font-weight: 700; white-space: nowrap; }
+
+/* Verification */
+.vsPanel { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; padding: 18px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); margin-bottom: 14px; box-shadow: var(--shadow-sm); }
+.vsLeft  { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+.vsGrade { width: 52px; height: 52px; border-radius: var(--radius-md); border: 2px solid; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 900; }
+.vsScore { font-size: 26px; font-weight: 800; }
+.vsScore span { font-size: 13px; color: var(--muted); font-weight: 400; }
+.vsLabel { font-size: 12px; color: var(--text2); font-weight: 600; margin-top: 1px; }
+.vsBarWrap { flex: 1; min-width: 180px; }
+.vsBarTrack { height: 8px; background: var(--surface2); border-radius: 4px; overflow: hidden; margin-bottom: 5px; border: 1px solid var(--border); }
+.vsBarFill  { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+.vsBarLabels { display: flex; justify-content: space-between; font-size: 10px; color: var(--muted); }
+
+.vsBreakdown { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 14px; }
+.vsItem { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px; box-shadow: var(--shadow-sm); }
+.vsItemHeader { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; color: var(--text2); margin-bottom: 8px; }
+.vsItemScore { color: var(--text); font-weight: 700; }
+.vsItemBar   { height: 5px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
+.vsItemFill  { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+.vsPlatforms { display: flex; flex-direction: column; gap: 7px; margin-bottom: 12px; }
+.vsPlatformRow { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; }
+.vsPlatformBar { flex: 1; height: 5px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
+.vsPlatformScore { font-size: 11px; min-width: 65px; text-align: right; }
+.vsFlags { display: flex; flex-wrap: wrap; gap: 6px; }
+.vsFlag { font-size: 12px; padding: 3px 10px; border-radius: 100px; background: var(--gold-lt); border: 1px solid rgba(217,119,6,0.3); color: var(--gold); }
+
+/* Prediction */
+.predVerdict { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 16px 20px; border-radius: var(--radius-md); border: 1.5px solid; margin-bottom: 16px; }
+.predVerdictIcon  { font-size: 28px; flex-shrink: 0; }
+.predVerdictLabel  { font-size: 15px; font-weight: 800; margin-bottom: 3px; }
+.predVerdictReason { font-size: 13px; color: var(--text2); line-height: 1.5; }
+.predSeasonal { font-size: 12px; color: var(--gold); margin-top: 3px; }
+.predBestPrice { margin-left: auto; text-align: right; flex-shrink: 0; }
+.predBestLabel { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+.predBestVal   { font-size: 20px; font-weight: 800; }
+.predBestPlat  { font-size: 11px; color: var(--muted); }
+
+.predGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.predCard { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow-sm); }
+.predCardHead { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 4px; }
+.predConf { font-size: 10px; padding: 2px 7px; border-radius: 4px; background: var(--surface2); color: var(--muted); font-family: var(--font-mono); }
+.predConf[data-conf="high"]   { color: var(--green); background: var(--green-lt); }
+.predConf[data-conf="medium"] { color: var(--gold);  background: var(--gold-lt);  }
+.predPriceRow { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.predPriceLabel   { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+.predPriceCurrent { font-size: 16px; font-weight: 700; color: var(--text); }
+.predPrice7d      { font-size: 16px; font-weight: 700; }
+.predArrow        { font-size: 20px; font-weight: 800; }
+.predCardFoot     { display: flex; justify-content: space-between; align-items: center; padding-top: 6px; border-top: 1px solid var(--border); }
+.predATL          { font-size: 11px; color: var(--muted); }
+.predDataPts      { font-size: 10px; color: var(--muted); font-family: var(--font-mono); }
+
+/* Price history */
+.histGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.histCard { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; box-shadow: var(--shadow-sm); }
+.histHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.histStats  { display: flex; justify-content: space-between; margin-top: 6px; font-size: 12px; font-weight: 600; }
+.histPoints { font-size: 11px; color: var(--muted); margin-top: 4px; font-family: var(--font-mono); }
+.spark { width: 100%; height: auto; display: block; }
+
+/* Local stores */
+.storeList { display: flex; flex-direction: column; gap: 8px; }
+.storeRow  { padding: 14px 16px; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--white); box-shadow: var(--shadow-sm); }
+.storeTop  { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.storeName { font-size: 14px; font-weight: 700; color: var(--text); }
+.storeLoc  { font-size: 13px; color: var(--text2); margin-top: 3px; }
+.storePrice{ font-size: 18px; font-weight: 800; color: var(--green); text-align: right; }
+.stockBadge{ font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 100px; display: inline-block; margin-top: 3px; }
+.inStock   { background: var(--green-lt); color: var(--green); border: 1px solid rgba(22,163,74,0.25); }
+.outStock  { background: #fff5f5; color: var(--red); border: 1px solid rgba(220,38,38,0.25); }
+
+/* Reviews */
+.revGrid   { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.reviewCard{ padding: 14px; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--white); display: flex; flex-direction: column; gap: 8px; box-shadow: var(--shadow-sm); }
+.reviewTop { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.stars     { font-size: 13px; color: var(--gold); }
+.fakeBadge { font-size: 11px; padding: 2px 8px; border-radius: 100px; background: var(--gold-lt); color: var(--gold); border: 1px solid rgba(217,119,6,0.25); }
+.revDate   { font-size: 12px; color: var(--muted); margin-left: auto; }
+.revText   { font-size: 13px; color: var(--text2); line-height: 1.55; }
+
+/* Verification badge on platform row */
+.vsBadge { display: flex; gap: 10px; align-items: center; padding: 10px 14px; border: 1px solid; border-radius: var(--radius-sm); }
+
+/* Conf/rec dynamic classes */
+.conf_high   { color: var(--green); }
+.conf_medium { color: var(--gold); }
+.conf_low    { color: var(--muted); }
+.rec_buy_now { color: var(--green); font-weight: 700; }
+.rec_wait    { color: var(--gold);  font-weight: 700; }
+.rec_neutral { color: var(--muted); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page { padding: 20px 16px 48px; }
+  .hero { grid-template-columns: 1fr; gap: 20px; }
+  .heroImg { max-height: 260px; }
+  .vsBreakdown { grid-template-columns: 1fr; }
+  .predGrid { grid-template-columns: 1fr; }
+  .revGrid  { grid-template-columns: 1fr; }
+}
+.sentRow   { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.sentChip  { font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 100px; border: 1px solid; }
+.fakeChip  { font-size: 12px; padding: 4px 10px; border-radius: 100px; background: var(--gold-lt); border: 1px solid rgba(217,119,6,0.3); color: var(--gold); }
+.sentScore { font-size: 12px; color: var(--muted); }

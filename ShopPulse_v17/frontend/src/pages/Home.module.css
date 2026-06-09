@@ -1,0 +1,178 @@
+.page { max-width: 1280px; margin: 0 auto; padding: 0 24px 64px; }
+
+/* ── Hero ── */
+.hero {
+  display: grid; grid-template-columns: 1fr 360px;
+  gap: 40px; align-items: center; padding: 48px 0 40px;
+}
+.heroText { display: flex; flex-direction: column; gap: 20px; }
+
+.pill {
+  display: inline-block; background: var(--accent-lt); color: var(--accent);
+  border: 1px solid rgba(240,90,40,0.25); border-radius: 100px;
+  font-size: 12px; font-weight: 600; padding: 5px 14px; width: fit-content;
+}
+.h1 {
+  font-size: 42px; font-weight: 800; color: var(--text);
+  line-height: 1.15; letter-spacing: -0.5px;
+}
+.highlight { color: var(--accent); }
+.sub { font-size: 15px; color: var(--text2); line-height: 1.7; max-width: 460px; }
+.sub strong { color: var(--text); }
+
+.heroForm {
+  display: flex; border: 1.5px solid var(--border);
+  border-radius: var(--radius-md); overflow: hidden; background: var(--white);
+  box-shadow: var(--shadow-md); max-width: 500px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.heroForm:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(240,90,40,0.1), var(--shadow-md); }
+.heroInput {
+  flex: 1; padding: 13px 16px; border: none; background: transparent;
+  color: var(--text); font-size: 14px; font-family: var(--font-body); outline: none;
+}
+.heroInput::placeholder { color: var(--muted); }
+.heroBtn {
+  padding: 13px 20px; background: var(--accent); border: none; color: white;
+  font-size: 14px; font-weight: 600; font-family: var(--font-body);
+  white-space: nowrap; transition: background 0.15s;
+}
+.heroBtn:hover { background: var(--accent-dk); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  padding: 6px 14px; border: 1px solid var(--border);
+  border-radius: 100px; background: var(--white); color: var(--text2);
+  font-size: 13px; font-weight: 500; transition: all 0.15s; cursor: pointer;
+}
+.chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-lt); }
+
+/* ── NLP Demo Card ── */
+.nlpDemo {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg); padding: 22px;
+  box-shadow: var(--shadow-md);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.nlpTop { display: flex; align-items: center; justify-content: space-between; }
+.nlpLabel { font-size: 12px; font-weight: 700; color: var(--purple); text-transform: uppercase; letter-spacing: 0.8px; }
+.nlpLive  { font-size: 12px; font-weight: 600; color: var(--green); }
+
+.nlpExample { min-height: 70px; display: flex; flex-direction: column; gap: 10px; }
+.nlpQ {
+  font-family: var(--font-mono); font-size: 13px; color: var(--text);
+  background: var(--surface2); padding: 10px 14px; border-radius: var(--radius-sm);
+  border-left: 3px solid var(--purple); line-height: 1.5;
+  animation: slideIn 0.3s ease;
+}
+@keyframes slideIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:none; } }
+.nlpTagWrap { display: flex; }
+.nlpTag {
+  font-size: 12px; font-weight: 600; color: var(--purple);
+  background: var(--purple-lt); border: 1px solid rgba(124,58,237,0.2);
+  padding: 3px 10px; border-radius: 100px;
+}
+
+.nlpPills { display: flex; gap: 6px; justify-content: center; }
+.nlpPill {
+  width: 7px; height: 7px; border-radius: 50%;
+  border: none; background: var(--border2); cursor: pointer; transition: background 0.2s;
+}
+.nlpPillActive { background: var(--purple); }
+
+.nlpFooter { font-size: 11px; color: var(--muted); text-align: center; border-top: 1px solid var(--border); padding-top: 12px; }
+.nlpFooter strong { color: var(--text2); }
+
+/* ── Stats strip ── */
+.statsStrip {
+  display: flex; background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-md); overflow: hidden; margin-bottom: 48px;
+  box-shadow: var(--shadow-sm);
+}
+.stat {
+  flex: 1; padding: 18px 16px; text-align: center;
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 3px;
+}
+.stat:last-child { border-right: none; }
+.statN { font-size: 20px; font-weight: 800; color: var(--accent); }
+.statL { font-size: 12px; color: var(--text2); }
+
+/* ── Sections ── */
+.section { margin-bottom: 48px; }
+.h2 { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.sectionSub { font-size: 14px; color: var(--text2); margin-bottom: 20px; }
+
+/* ── Platforms ── */
+.platformGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.platformCard {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: var(--radius-md); padding: 20px 16px;
+  display: flex; flex-direction: column; gap: 6px;
+  transition: all 0.2s; cursor: default;
+  position: relative; overflow: hidden;
+}
+.platformCard::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--pc); opacity: 0.8;
+}
+.platformCard:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--pc); }
+.platformIcon { font-size: 26px; }
+.platformName { font-size: 14px; font-weight: 700; color: var(--text); }
+.platformTag  { font-size: 12px; color: var(--muted); }
+.platformDot  { width: 8px; height: 8px; border-radius: 50%; background: var(--pc); margin-top: 6px; opacity: 0.6; }
+
+/* ── Categories ── */
+.catGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; }
+.catCard {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: var(--radius-md); padding: 18px 10px;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  cursor: pointer; transition: all 0.15s; font-family: var(--font-body);
+}
+.catCard:hover {
+  border-color: var(--cc); background: var(--surface2);
+  transform: translateY(-2px); box-shadow: var(--shadow-sm);
+}
+.catEmoji { font-size: 26px; }
+.catName  { font-size: 12px; font-weight: 600; color: var(--text2); text-align: center; }
+
+/* ── NLP Examples ── */
+.examples { display: flex; flex-direction: column; gap: 8px; }
+.exRow {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  padding: 14px 18px; background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-md); cursor: pointer; text-align: left;
+  transition: all 0.15s; font-family: var(--font-body);
+}
+.exRow:hover { border-color: var(--accent); background: var(--accent-lt); }
+.exQ  { font-family: var(--font-mono); font-size: 13px; color: var(--text); }
+.exTag { font-size: 12px; font-weight: 600; color: var(--accent); background: var(--accent-lt); border: 1px solid rgba(240,90,40,0.2); padding: 3px 10px; border-radius: 100px; white-space: nowrap; }
+
+/* ── Mobile ── */
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; gap: 28px; }
+  .h1   { font-size: 30px; }
+  .platformGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .page { padding: 0 16px 48px; }
+  .h1   { font-size: 26px; }
+  .statsStrip { display: grid; grid-template-columns: repeat(2, 1fr); }
+  .stat { border-bottom: 1px solid var(--border); }
+  .catGrid { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); }
+  .exRow { flex-direction: column; align-items: flex-start; }
+}
+
+/* Local Stores CTA */
+.storeCtaGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.storeCtaCard {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: var(--radius-md); padding: 20px 16px;
+  text-align: center; cursor: pointer;
+  transition: all 0.18s; box-shadow: var(--shadow-sm);
+}
+.storeCtaCard:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: var(--shadow-hover); }
+.storeCtaIcon  { font-size: 28px; margin-bottom: 8px; }
+.storeCtaTitle { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.storeCtaSub   { font-size: 12px; color: var(--text2); line-height: 1.5; }
