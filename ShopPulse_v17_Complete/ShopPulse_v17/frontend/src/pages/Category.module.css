@@ -1,0 +1,15 @@
+.page  { max-width: 1280px; margin: 0 auto; padding: 28px 24px 64px; }
+.header{ display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; }
+.title { font-size: 22px; font-weight: 800; color: var(--text); }
+.count { font-size: 13px; color: var(--muted); }
+.toolbar { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.toolbarLabel { font-size: 13px; color: var(--muted); font-weight: 600; }
+.sortChip { padding: 6px 14px; border: 1px solid var(--border); border-radius: 100px; background: var(--white); color: var(--text2); font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.15s; font-family: var(--font-body); }
+.sortChip:hover, .active { border-color: var(--accent); color: var(--accent); background: var(--accent-lt); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 16px; }
+.pagination { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 32px; }
+.pageBtn { padding: 9px 22px; border: 1.5px solid var(--border); border-radius: var(--radius-md); background: var(--white); color: var(--text2); font-size: 14px; font-weight: 600; font-family: var(--font-body); transition: all 0.15s; cursor: pointer; }
+.pageBtn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); background: var(--accent-lt); }
+.pageBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+.pageInfo { font-size: 14px; color: var(--text2); font-weight: 600; }
+@media (max-width: 640px) { .grid { grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 10px; } }
